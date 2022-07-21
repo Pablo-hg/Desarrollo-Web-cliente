@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+<body>
+    <script>
+        var pajaros = ["Canarios","Caboya","Periquito","Loro","agapornis"];
+        var lagartos = ["Camaleon","Coral","Iguana"];
+        var mamiferos = ["Doberman","Golden","agapornis","Huro"];
+        var catalogo = [[pajaros],[lagartos],[mamiferos],];
+        var nuevos = ["Labrador","Husky","Pug","Boxer","San Bernando","Schanuer","Foxtier","Pomerania","Samoyedo","Gran danés","Galgo","Dálmate"]
+        for(var i = 0; i < nuevos.length;i++){
+            catalogo[2].pop(nuevos[i]);
+        }
+        document.write(pajaros+"<br/>"+lagartos+"<br/>"+mamiferos+"<br/>"+catalogo+"<br/>"+nuevos+"<br/>");
+        //.slice() --> corta y pega un array
+        //.join() --> convierte array en un string
+        //indexOF() --> busca el 1º por la izquierda
+        //.lastindex() --> busca el 1º por la derecha
+        //.includes() --> busca y devuelve true o falso
+        //.find(elemento => condicion) --> busca con una condicion y devuelve el 1º
+        //.filter(elemento => condicion) --> busca con una condicion y devuelve array con los elementos que lo cumplen
+        //is.array --> es una array? true/false
+
+        //Crear el array [1,5,9,3,4,2] y realiza por consola:
+        //indice que contenga el 9
+        //indice que conetenga el 5
+        //¿está le valor hhla?
+        //var numero = [1,5,9,3,5,4,2];
+        //console.log(numero.indexOf(9));
+        //indice = 0;
+        /*do{
+            if(!numero[indice].includes(5)){
+                indice++;
+                continue;
+            }
+            else{
+                console.log(indice);
+            }
+            indice++;
+        }while(indice==numero.length-1)
+        if(!numero.includes("hola"))console.log("no está el valor hola");*/
+
+
+        //array.reverse --> invierte el orden de un array
+        //array.sort --> ordena alfabeticamente o de menor a mayor
+        /*console.log(numero);
+        console.log(numero.reverse());
+        console.log(numero.sort());*/
+
+        //Estructuras set --> no existen valores dupicados en un set
+        //var nombrevar = new Set();
+        //nombrevar.add(valor) --> añado valores a la estructura
+        //Convertir array a set --> var nombrevar = new Set([array]) --> viceversa al reves
+        //nombrevar.size --> devuelve el tamaño de la estructura
+        //nombrevar.delete(valor) --> borrar un elemento
+        //nombrevar.clear() --> borrar toda la estructura
+        //nombrevar.has(valor) --> devuelve true si existe
+        //for(let k of nombreset){console.log(k)} --> recorrer  el set rapido
+
+        var numero = [1,5,9,3,5,4,2];
+        //estructura set y guardalo en la var conjunto
+        //añade el valor 0 y sacalo por pantalla
+        //recorre todo el conjunto de manera iterada y sacalo por pantalla
+        var conjunto = new Set(numero);
+        //
+        conjunto.add(0);
+        //la k corresponde al valor de la poscion
+        for(let k of conjunto){
+            if(k==0)console.log(k);
+        }
+        //
+        for(let k of conjunto){
+            console.log(k);
+        }
+    </script>
+    </table>
+</body>
+</html>

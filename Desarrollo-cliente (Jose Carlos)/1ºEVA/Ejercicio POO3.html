@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+        -Funcion constructor que cree objetos que repesenten figuras de ordenador que tengan las propiedades de :
+           Marca(texto),Modelo(texto),RAM(numerico en GB),capacidad disco(numerico en TB),Pulgadas pantalla(numerico).
+        -Método que devuelva en forma de tabla los dejates dle objeto.
+        -Como valores por defecto  son 17 pulgadas,8GBRAM,3TB.
+        -La marca y el modelo son necesarios.
+        -Crea otro constructor que representen portatiles,hereda todo de ordenador y añade "autonomia"(numerico en horas).
+        -Por defecto tienen 4 horas de autonomia, 15 pulgadas y 1TB.
+        */
+
+        function Ordenador(marca,modelo,ram=8,disco=3,pulgadas=17){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.ram = ram;
+            this.disco = disco;
+            this.pulgadas = pulgadas;
+            this.toString = function(){
+                return `<table>
+                            <tr><td>Marca</td>/<td>${this.marca}</td></tr>
+                            <tr><td>Modelo</td>/<td>${this.modelo}</td></tr>
+                            <tr><td>RAM</td>/<td>${this.ram}</td></tr>
+                            <tr><td>Capacidad</td>/<td>${this.disco}</td></tr>
+                            <tr><td>Pulagdas</td>/<td>${this.pulgadas}<td></tr>
+                        </table>`
+            }
+        }
+
+        function Portatil(marca,modelo,ram=8,disco=1,pulgadas=15, autonomia = 4){
+            this.__proto__ = new Ordenador(marca,modelo,ram,disco,pulgadas);
+            this.autonomia = autonomia;
+            this.toString = function (){
+                return `${this.__proto__.toString()}
+                <p><small>Autonomia: ${this.autonomia} horas </small><p>`
+            }
+        }
+
+        var ordenador1 = new Ordenador("HP","sfdhsjhf",8,3,23);
+        var portatil1 = new Portatil("Asus","Aspire");
+        document.write(ordenador1.toString()+ `</br>`);
+        document.write(portatil1.toString()+ `</br>`);
+    </script>
+</body>

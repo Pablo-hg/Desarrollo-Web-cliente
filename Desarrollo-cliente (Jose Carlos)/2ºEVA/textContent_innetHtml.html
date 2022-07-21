@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+    <style>
+        .notice{color:black}
+        #main{color: blue;}
+    </style>
+    <body>
+        <h1>Extarear contenido</h1>
+        <p id="main">AAAAAAAAAA</p>
+        <p class="noticia">BBB</p>
+        <p>CCCCCCCCCCCCCC</p>
+        <p class="notice">DDD</p>
+    </body>
+    <script>
+        console.log(document.getElementById("main").textContent); // devuelve AAAAAAAA
+        document.getElementById("main").textContent = "XXXXXXX"; //cambiamos el valor del "main"
+    </script>
+</html>

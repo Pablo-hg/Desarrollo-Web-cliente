@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+    <html>
+        <head>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <script>
+                //Estrucutura de control --> nos permiten dinamizar programas
+                //con los operadores logicos,aritmeticos y de copaacion.
+                //if-else --> estructuras condicionales
+                //for,while,break-continue,swicht,try-catch --> bucles
+
+                //IF-ELSE
+                //Pedir al usuario una nota, si es > 5 , sacamos una alerta diciendo aprovado, 
+                //en caso contrario suspenso
+                /*let nota;
+                nota = prompt("Introduce su nota de evaluacion");
+                if (nota >= 5){
+                    alert("Aprobado")
+                } else {
+                    alert("suspenso");
+                }*/
+
+                //FOR
+                //Crea dos varibles una en 0 y otra en 10.
+                //Crea un bucle que pase a una unidad a la otra
+                //y por consiguiente se le reste a la avariable que cede el valor
+                /*let valor1 = 0;
+                let valor2 = 10;
+                for(valor1; valor1 <= 10;valor1++){
+                    document.write("Contador: " + valor1 + " | " + "Descontador: " + valor2-- + "<br>");
+                }*/
+
+                //WHILE
+                //do-while --> nos permite mas control
+                //Introduce un numero del 1 al 10 y comprobar 
+                //ese numero con otro del porgrama y decir si lo ha adivinado
+                //let numero1 = prompt("Introduce un numero entre 1 y el 10");
+                /*function numale(min,max){
+                    return Math.round(Math.random()*(max-min)) + min;
+                }
+                //DO WHILE
+                while(numero1 != numero2){
+                    numero1 = prompt("Introduce un numero entre 1 y el 10");
+                }
+                alert("acertado");*/
+                //Opcion B
+                /*do{
+                    numero1 = prompt("Introduce un numero entre 1 y el 10");    
+                } while (numero1 != Number(numero2)) {
+                    alert("acertado");
+                }*/
+                //Number()--> conierte el valor en numero
+
+                //BREAK Y CONTINUE
+                //generar del 0 al 100 y solo aquellos
+                //que sean impares
+                /*let numero = 0;
+                for(numero=0;numero<101;numero++){
+                    if(numero/2 == parseInt(numero/2)){
+                        continue //reinicia el bucle
+                    }
+                    document.write(numero+ "<br>");
+                }*/
+
+                //SWICHT --> casos
+                //generar del 0 al 100 y solo aquellos
+                //que sean impares
+                /*let numero = null;
+                numero = Number(prompt("Introduce tu codigo del traajo(1-2-3)")) 
+                switch(numero){
+                    case 1: document.write("eres medico");
+                        break;
+                    case 2: document.write("eres enfermera");
+                        break;
+                    case 3: document.write("eres auxiliar");
+                        break;
+                    default : document.write("no existe ese codigo");
+                        break;
+                }*/
+
+                //OPERADORES BITWISE
+                // | , & , ~, ^, >>, <<
+
+                //TRY-CATCH
+                //Intentamos algo, y si da error, ejecutamos algo
+                /*let var2 = 2;
+                let suma = 0;
+                try{
+                    document.write(var2 + var1);
+                }catch{
+                    let var1 = 10;
+                    suma = var1 + var2;
+                    document.write("No existia var 1, por lo que se ha creado . " + suma);
+                }*/
+            </script>
+        </body>
+    </html>

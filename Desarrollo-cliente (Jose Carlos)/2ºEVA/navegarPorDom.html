@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section id="s1">
+            <h1 id="titulo">Hijo de DOM</h1>
+            <p id="parrafo1">Este es un <strong>nodo</strong> que se llama parrafo1</p>
+            <p id="parrado1">yo soy el parrafo2</p>
+            <p id="parrafo1">Y yo, el parrafo3</p>
+        </section>
+   
+    <script>
+        var parrafo = document.querySelectorAll("parrafo1");
+        for(let hijo of parrafo.childNodes) {
+            console.log(`Contenido: "${hijo.nodeValue}" + \n` + `Tip de nodo: "${hijo.nodeType}", "${hijo.nodeName}"`);
+        }
+    </script>
+    </body>
+</html>

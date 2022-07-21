@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initical-scale=1.0">
+</head>
+
+<body>
+    <!-- Crea un programa que contenga una funcion llamada "seno_rad", 
+    la cual se le pasa el a´ngulo en grados sexadecimales e invoque a la funncion "mi_seno" 
+    que calcula el seno de dicho ángulo -->
+    <script>
+        //Funcion Callback --> funcion que invoca a otras funciones que usan el parámetro com variable
+        //function nombre (variable, funcion_invoca){cuerpo_funcion}
+        var n = Number(prompt("Introduce un numero"))
+        function seno_rad(y,accion){
+            y = Math.PI*(y/180);
+            return document.write(accion(y));
+        }
+        function mi_seno(x){
+            return Math.sin(x);
+        }
+
+     </script>adsad
+</body>
+</html>ads

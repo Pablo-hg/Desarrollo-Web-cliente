@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .clase1{color: blue;}
+        .clase2{text-decoration: underline;}
+    </style>
+    <body>
+        <h1>Varias clases</h1>
+        <p class="clase1 clase2">Esto es el parrafo</p>
+    </body>
+    <script>
+        var clases = document.getElementsByTagName("p");
+        for(let k of clases[0].classList){
+            console.log(k)
+        }
+    </script>
+</html>

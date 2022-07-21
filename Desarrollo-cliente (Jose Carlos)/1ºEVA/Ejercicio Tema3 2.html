@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+        Comprobar como de aleaorio es un Math.random.
+        Calcular 10000 veces numeros aleatorios del 1 al 10, mostrando la frecuencia que aparecen cada numero.
+        Solo 3 bucles
+        */
+
+        var numeros = 10;
+        var numale = 10000;
+        var cantidadnumeros =  [0,0,0,0,0,0,0,0,0,0];
+
+        for(let i = 0; i < numale;i++){
+            var ale =  Math.random(1,10);
+            switch (ale){
+                case ale==1 : cantidadnumeros[0]++;
+                    break;
+                case ale==2 : cantidadnumeros[1]++;
+                    break;
+                case ale==3 : cantidadnumeros[2]++;
+                    break;
+                case ale==4 : cantidadnumeros[3]++;
+                    break;
+                case ale==5 : cantidadnumeros[4]++;
+                    break;
+                case ale==6 : cantidadnumeros[5]++;
+                    break;
+                case ale==7 : cantidadnumeros[6]++;
+                    break;
+                case ale==8 : cantidadnumeros[7]++;
+                    break;
+                case ale==9 : cantidadnumeros[8]++;
+                    break;
+                case ale==10 : cantidadnumeros[9]++;
+                    break;
+            }
+        }
+        document.write(cantidadnumeros)
+
+        /*for(let i = 0; i < numeros;i++){
+            document.write(`Num ${i}: ${cantidadnumeros[i]} <br>`)
+        }*/
+
+    </script>
+</body>

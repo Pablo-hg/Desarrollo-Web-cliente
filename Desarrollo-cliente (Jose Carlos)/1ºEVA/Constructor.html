@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        //creo un constructor(tipo de objeto nuevo) que recibe dos paramentros
+        function pointsmaker(A, B) {
+            //Guardamos los parametros recibidios como las coordenadas "x" e "y" siendo estas las propiedades de dicho objeto
+            this.x = A;
+            this.y = B;
+            //creamos un método en el objeto que nos devuelve las propiedades del objeto
+            this.mostrar = () => `(${this.x},${this.x})`;
+        }
+
+        //Creamos dos objetos de tipo "poinstmaker" a los que le pasamos dos valores
+        var p1 = new pointsmaker(0, 0);
+        var p2 = new pointsmaker(10, 1);
+
+        //Al crear objetos de tipo "pointsmaker", podemos acceder al método de dicho tipo de objeto
+        document.write(p1.mostrar());
+        document.write("<br>");
+        document.write(p2.mostrar());
+    </script>
+</body>

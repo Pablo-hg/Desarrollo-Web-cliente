@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initical-scale=1.0">
+</head>
+<body>
+    <script>
+        /*
+        Crear un programa que cifre con "Cesar" un mensaje.
+        Pide al usuario un texto y una clave, y que escriba dicho texto desplazando 
+        los caracteres en al tabla "Unicode" las posiciones indicadas en al clave
+        */
+        var texto = prompt("Introduce un texto")
+        var clave = prompt("Introduce las posiciones a mover")
+        var descifrado = "";
+        for(let k of texto){
+            var unicode = k.charCodeAt(0);
+            unicode = parseInt(unicode) + parseInt(clave);
+            var letra = String.fromCharCode(unicode);
+            descifrado += (letra);
+        }
+        document.write(texto, " = " ,  descifrado);
+    </script>
+</body>
+</html>

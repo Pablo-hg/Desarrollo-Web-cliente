@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*Expresiones regulares --> busca,captura o reemplaza texto utilizando patrones
+        Sintaxis --> new RegExp('expresion',flag) --> 'expresion/flag'
+        */
+        //Crear la expresion regular de los NIF de España
+        var document = /[KLXYZ0-9][0-9]{8}[A-Z]{1}/;
+        var document2 = new RegExp('[KLXYZ0-9][0-9]{8}[A-Z]{1}');
+
+        /*Flag(banderas) --> parámetro que permite realizar concreciones en la expresion regular:
+            .ignoreCase --> ignora mayus y minus --> insensible a mayus/minus
+            .global --> busqueda global --> siuge buscando coincidencias en lugar de parse
+            .multiline --> Multilinea --> permite a ^ y $ tratar los finales de linea \r o \n
+            .unicode  --> Interpreta el patron como un codigo de una sentencia Unicode
+            .sticky --> Busca solo desade la posicion indicada por "lastIndex"
+        */
+
+        
+    </script>
+</body>

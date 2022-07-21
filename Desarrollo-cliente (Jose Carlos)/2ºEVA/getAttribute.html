@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>obtener valor</title>
+    <style>
+        #lolo{color: blue;}
+        .jiju{text-decoration: line-through;}
+        .jaji{text-decoration: underline;}
+    </style>
+</head>
+    <body>
+        <h1>Obtener valor</h1>
+        <p>Sea la lista de la compra</p>
+        <ul>
+            <li class="jijy">Pan</li>
+            <li id="lolo">Chetos</li>
+            <li class="jaji">Cervezas</li>
+        </ul>
+        <script>
+            var listado = document.querySelectorAll("li");
+            for(let k of listado){
+                document.write(k.getAttribute("class"));
+            }
+        </script>
+    </body>
+</html>

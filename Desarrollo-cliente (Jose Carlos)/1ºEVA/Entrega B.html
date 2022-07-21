@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Ebtrega B</title>
+        </head>
+        <body>
+            <script>
+                //Declara una variable llamada var1 que contenga 5 en formato carácter
+                var var1 = "5";
+                //Declara una variable llamada var2 que contenga 10 en formato numérico
+                var var2 = 10;
+                //Suma var1 y var2, ¿qué ha sucedido? ¿por qué?
+                console.log(var1 + var2);
+                /*
+                Al ser una de las variables formato caracter, al hacer la suma
+                //lo que hacemos en realidad es concatenar las dos variables, es decir,
+                //juntamos las dos variables como si fueran textos*/
+
+                //Resta var1 menos var2, ¿qué ha sucedido? ¿por qué?
+                console.log(var1 - var2);
+                /*
+                Al intentar restar dos variables , siendo una formato caracter pero un numero,
+                lo que sucede es que convertimos la variable tipo caracter en numerica y realizamos
+                la operacion. Porque , siguiendo la regla del ejemplo anterior, a un texto no se 
+                le puede quitar otro texto pero si concatenarlo.
+                */
+
+                //Expresa el apartado 3 y el apartado 4 de nuevo en forma de alerta
+                alert(var1 + var2);
+                alert(var1 - var2);
+                
+
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="capa"></div>
+        <p>Ya hemos aprendido</p>
+        <script>
+            //guardo el div "capa"
+            var capa = document.getElementById("capa");
+            //creo una etiqueta y lo guardo en una variable
+            var newItem = document.createElement("H1");
+            //creo un texto nodo (co su contenido) y lo guardo en una variable
+            var textnode = document.createTextNode("Añadiendo contenido"); 
+            //añado el texto nodo a la etiqueta creadda
+            newItem.appendChild(textnode); 
+            //inserto al div el nuevo nodo 
+            capa.insertBefore(newItem, capa.childNodes[0]);
+            //imprimo el contenido del div
+            document.write(capa.textContent);
+        </script>
+    </body>
+</html>
