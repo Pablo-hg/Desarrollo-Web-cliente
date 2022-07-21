@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <style src="Ejercicio-Cuadrados.css"></style>
+        </head>
+        <body>
+            <!-- Pintar 2000 aleatorios -->
+            <canvas id="micanvas" width="1900" height="980"></canvas>
+            <script>
+                var numero = 2000;
+                var elemento = document.getElementById("micanvas");
+                var contexto = elemento.getContext('2d');
+                var numeroramdon = 0;
+                var numeroramdon2 = 0;
+
+                var letters = '0123456789ABCDEF'.split('');
+                var color = '#';
+                for(let j = 0;j<numero;j++){
+                    for (let i = 0; i < 6; i++){
+                        color += letters[Math.floor(Math.random()*16)];
+                    }
+                    numeroramdon = Math.floor(Math.random()*1920);
+                    numeroramdon2 = Math.floor(Math.random()*1080);
+                    
+                    contexto.fillStyle = color;
+                    contexto.fillRect(numeroramdon,numeroramdon2,50,50);
+                    color = '#';
+                }
+                //VERSION BUENA
+                
+            </script>
+        </body>
+    </html>

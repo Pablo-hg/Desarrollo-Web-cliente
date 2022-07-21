@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Ejercicio 1</title>
+        </head>
+        <body>
+            <script>
+                 let x = 1;
+                 var y = 2;
+                 const z = 3;
+                 //Desde dentro del bloque podemois llamar a cualquier tipo de variable
+                 {
+                    let X = 3; //variable de bloque. No se puede escribir dos veces la misma variable
+                    var Y = 2; //Variable global 
+                    const Z = 1; //variable que es fija/no modificable(si se crea global es global, si se crea en un bloque es solo de bloque)
+                     
+                 }
+                 //Desde fuera del bloque, solo podemos llamar a las variables de tipo "var" que estan dentro,
+                 //el resto de difernetes variables no son accesibles
+                console.log(x,y,z);
+                //Solo podemos llamar a las variables globales
+                console.log(X,Y,Z);
+            </script>
+        </body>
+    </html>

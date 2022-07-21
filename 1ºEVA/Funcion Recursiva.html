@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initical-scale=1.0">
+</head>
+
+<body>
+    <!-- Sin la necesidad de crear un bucle, resuleve el factorial de un numero cualquiera-->
+    <script>
+        var n = Number(prompt("Introduce un numero:"))
+        function factorial(n){
+            if(n<=1) return(1)
+            else return (n*factorial(n-1))
+        }
+        document.write(`el factorial de ${n} es ${factorial(n)}`)
+     </script>
+</body>
+</html>

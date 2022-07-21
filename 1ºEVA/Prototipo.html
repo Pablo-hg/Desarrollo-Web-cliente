@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        //Prototipos --> es el omlde que crea objetos --> es la "clase".
+        //Si cambio algo de dicho prototipo, afecta a los objetos producidos a partir de este.
+        //Para acceder al prototipo se pone  --> "__proto__" o con "Object.getPrototuoeOf(objeto)"
+
+        /* Crea una funcion "Punto" que permita crear objetos que representen puntos en un espacio 2d.
+        Además ha de contar con un método llamado "mostrar" que nos de sus coordenadas */
+        function Punto(A, B) {
+            this.x = A;
+            this.y = B;
+            this.mostrar = () => `(${this.x},${this.x})`;
+        }
+
+        var a = new Punto(10,70);
+
+        //Define un método en el constructor que sume las coordenadas
+        //modo sin flecha
+        Punto.prototype.sumaXY1=function(){
+            return this.x + this.y;
+        }
+        //con flecha
+        Punto.prototype.sumaXY2 = (object) => object.x + object.y;
+        
+        //Define una nueva propiedad que represente la coordenada z = 10;
+        Punto.prototype.z = 10;
+
+        document.write(a.sumaXY1(),"<br>");
+        document.write(a.sumaXY2(a),"<br>");
+        document.write(a.z);
+    </script>
+</body>

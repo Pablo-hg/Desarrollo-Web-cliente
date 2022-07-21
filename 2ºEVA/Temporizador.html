@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            /*
+            -setTimeout(fx,time) --> establece una cuenta atrás unica para desencadear el evento
+            -setInterval(fx.time) --> establece una secuencia temporal de aparicion de eventos
+            -clearTimeout(var) --> cancela el temporizador
+            -clearInterval(var) --> cancela el temporizador
+                fx--> es el codigo ha ejecutarse
+                time--> cantidad de tiempo
+            */
+           //setTimeout(()=>alert("hola"),5000);
+           //setInterval(()=>alert("hola"),5000);
+           var tiempo = setInterval(()=>alert("hola"),2000);
+           setTimeout(()=>clearInterval(tiempo),6000);
+        </script>
+    </body>
+</html>

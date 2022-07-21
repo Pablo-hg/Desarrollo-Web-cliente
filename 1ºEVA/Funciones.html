@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Funciones</title>
+</head>
+
+<body>
+    <script>
+        /*FUNCIONES
+        Funcion --> codigo que realiza una tarea a partir de unos datos de entrada
+        Caracterisitcas:
+            --> pueden ser invocadaas uno y otra vez
+            --> facilita la deteccion de rrores
+            --> reducen la cantidad de codigo
+            --> permite aumentar la legibilidad de un codigo
+        Elementos:
+            Identificador --> corresponde al nombre de la funcion(se escribe en minusculas)
+            Parámetros --> variables locales a la funcion cuyo objetivo es almacenar datos
+            Resultado --> valor devuelto por medio de un "return"
+            Instruccion --> lo que va dentro de la funcion
+        Sintaxis:
+            function nombre_identificador([listado_parametros]){cuerpo_funcion}
+        */
+
+        function saludar() {
+            return "hola, esta es mi funcion";
+        }
+        console.log(saludar());
+        //Crear funcion con identificador "saludar2", con parametro "nombre" y instrunccion sea sacar el nombre
+
+        function saludar2(nombre) {
+            return `Hola, ${nombre}`;
+        }
+        console.log(saludar2("Pablo"));
+
+        //funcion par que cuente el nº de numeros pares de un array
+        function pares(array) {
+            let contador = 0;
+            for (let k of array) {
+                if (k % 2 == 0) contador++;
+            }
+            return contador;
+        }
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(pares(array));
+    </script>
+</body>
+
+</html>

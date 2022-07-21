@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+        Incorporar un método que calcule la media aritmetica de un array
+       */
+
+        Array.prototype.mediaarit=function(){
+        const reducer = (previousValue, currentValue) => previousValue + currentValue;   
+        let suma = this.reduce(reducer);
+        let tamaño = this.length;
+        return suma/tamaño;
+       }
+
+       var array1 = new Array(10,20,30);
+       document.write(array1.mediaarit());
+
+    </script>
+</body>

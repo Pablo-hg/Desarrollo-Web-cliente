@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+    <html>
+        <head>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <!-- calcular un numero aleatorio entre el 1 y el 500, cuya condicion de parada consista 
+                que hayan aparecido al menos siete veces un numero divisible por siete -->
+            <h1>Divisible por siete</h1>
+            <script>
+                //SEMILLA ALEATORIO --> sirve para parametrizar los resulatdos (todo el mundo el misdom resultado)
+                //el seed tiene que tener min 9 cifras
+                var seed = 777666777;
+                var modulo = 2**32;
+                var a = 1664225;
+                var c = 1013904233;
+                function getRamdom(){
+                    var returnval = seed/modulo;
+                    seed = (a* seed + c) % modulo;
+                    return returnval;
+                }
+
+                var numeroramdon = null;
+                var numero = 0;
+                var acumulador = 0;
+                do{
+                    numeroramdon = Math.round(getRamdom() * 500 +1);
+                    if(numeroramdon%7==0 && numero == numeroramdon){
+                        acumulador++;
+                        document.write(numeroramdon + " : " + acumulador + "<br>") ;
+                    }
+                    numero = numeroramdon;
+                } while (acumulador<8){
+                    document.write("El numero que cumple la condicion es el " + numeroramdon);
+                }
+            
+            </script>
+        </body>
+    </html>
